@@ -13,6 +13,7 @@
 
 int ioctl_open(struct inode *inode, struct file *filp)
 {
+	int x=0;
 	pr_debug("%s() is invoked\n", __FUNCTION__);
 
 	filp->private_data = container_of(inode->i_cdev, struct ioctl_dev, cdev);
